@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="sdpi.css">
+        <script src="pi.js"></script>
+    </head>
+    <body>
+        <div class="sdpi-wrapper">
+
+            <hr>
+
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Address</div>
+                <input type="text" class="sdpi-item-value" id="ph-addr-input" value="" placeholder="e.g. 192.168.1.100:8080">
+            </div>
+
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">App Password</div>
+                <input type="password" class="sdpi-item-value" id="ph-key-input" value="" placeholder="(get from Pi-hole settings in expert mode)">
+            </div>
+
+            <div class="sdpi-item" id="disable-time">
+                <div class="sdpi-item-label">Time (s)</div>
+                <input type="number" class="sdpi-item-value" id="disable-time-input" value="" placeholder="Duration of disable length in seconds">
+            </div>
+
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Display Info</div>
+                <select name="stat" id="stat-input" class="sdpi-item-value select">
+                    <option value="none">None</option>
+                    <option value="domains_being_blocked">Domains Being Blocked</option>
+                    <option value="dns_queries_today">DNS Queries Today</option>
+                    <option value="ads_blocked_today">Ads Blocked Today</option>
+                    <option value="ads_percentage_today">% Ads Blocked Today</option>
+                    <option value="unique_domains">Unique Domains</option>
+                    <option value="queries_forwarded">Queries Forwarded</option>
+                    <option value="queries_cached">Queries Cached</option>
+                    <option value="clients_ever_seen">Clients Ever Seen</option>
+                    <option value="unique_clients">Unique Clients</option>
+                </select>
+            </div>
+
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Conn. Type</div>
+                <select name="protocol-input" id="protocol-input" class="sdpi-item-value select">
+                    <option value="http" selected>HTTP</option>
+                    <option value="https">HTTPS</option>
+                </select>
+            </div>
+
+            <div class="sdpi-item" id="https-warning" style="display:none;">
+                <div class="sdpi-item-label" style="color:#e8a900;">⚠ HTTPS</div>
+                <div class="sdpi-item-value" style="font-size:11px; color:#e8a900;">
+                    Pi-hole v6 uses a self-signed certificate by default.
+                    HTTPS will only work if you have installed a trusted certificate on your Pi-hole.
+                    Otherwise, use HTTP.
+                </div>
+            </div>
+
+            <div class="sdpi-item" id="error-msg" style="display:none;">
+                <div class="sdpi-item-label" style="color:#e05555;">Error</div>
+                <div class="sdpi-item-value" id="error-text" style="font-size:11px; color:#e05555;"></div>
+            </div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+{
+	"SDKVersion": 2,
+	"Author": "Ibrahim",
+	"CodePath": "code.html",
+	"PropertyInspectorPath": "pi/index_pi.html",
+	"Description": "Monitor & Control Pi-hole from your Stream Deck",
+	"Name": "Pi-hole",
+	"UUID": "us.ibrhoom.pihole",
+	"Category": "Pi-hole",
+	"CategoryIcon": "img/category-icon",
+	"Icon": "img/toggle",
+	"URL": "https://github.com/iBRHooM/streamdeck-pihole-v6",
+	"Version": "1.0.0.0",
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "10.11"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Software": {
+		"MinimumVersion": "6.4"
+	},
+	"Actions": [
+		{
+			"Icon": "img/temp-disable-action-image",
+			"Name": "Temporarily Disable (v6)",
+			"States": [
+				{
+					"Image": "img/temp-disable"
+				},
+				{
+					"Image": "img/temp-disable-grey"
+				}
+			],
+			"UUID": "us.ibrhoom.pihole.temporarily-disable"
+		},
+		{
+			"Icon": "img/toggle-action-image",
+			"Name": "Toggle (v6)",
+			"States": [
+				{
+					"Image": "img/toggle"
+				},
+				{
+					"Image": "img/toggle-grey"
+				}
+			],
+			"UUID": "us.ibrhoom.pihole.toggle"
+		},
+		{
+			"Icon": "img/disable-action-image",
+			"Name": "Disable (v6)",
+			"States": [
+				{
+					"Image": "img/disable"
+				},
+				{
+					"Image": "img/disable-grey"
+				}
+			],
+			"UUID": "us.ibrhoom.pihole.disable"
+		},
+		{
+			"Icon": "img/enable-action-image",
+			"Name": "Enable (v6)",
+			"States": [
+				{
+					"Image": "img/enable"
+				},
+				{
+					"Image": "img/enable-grey"
+				}
+			],
+			"UUID": "us.ibrhoom.pihole.enable"
+		}
+	]
+}
